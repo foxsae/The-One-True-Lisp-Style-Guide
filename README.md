@@ -15,7 +15,7 @@
 
 (LPCM) [Lisp programming style from Carnegie Mellon University Lisp Group](https://www.cs.cmu.edu/Groups/AI/html/faqs/lang/lisp/part1/faq-doc-4.html) (www)
 
-## RESULTS
+## RESULTS SO FAR...
 ### 1. Documentation
   * **Consensus:** Docstrings are very important. Docstrings are more important than comments. 
 ### 2. Comment Conventions
@@ -45,9 +45,9 @@
 ### 14. Recursion
   * **Consensus:** You need to use recursion only when you need to use recursion.
 
+# LONG FORM EXPLANATIONS FROM SOURCES
 
-
-# DOCUMENTATION
+## DOCUMENTATION
 
 ## Consensus: Docstrings are very important. Docstrings are more important than comments. 
 
@@ -75,7 +75,7 @@
  (LLSG)
  * Docstrings everywhere.
 
-# COMMENT CONVENTIONS
+## COMMENT CONVENTIONS
 
 ## Consensus: (1) ; in-line comment. (2) ;; top-level form/function comment. (3) ;;; in-between forms/functions/regions comment. (4) ;;;; header comment.
 
@@ -103,7 +103,7 @@
 * Comments with two semicolons, ;;, should describe regions of code within a function or some other top-level form. 
 * Single-semicolon comments, ;, should just be short notes on a single line.
 
-# LINE LENGTH
+## LINE LENGTH
 
 ## Consensus: Limit the line length, less than 100, but shorter is better.
 
@@ -120,7 +120,7 @@
 (NPKP)
 * 80-column maximum width.
 
-# NAMING CONVENTIONS
+## NAMING CONVENTIONS
 
 ## Consensus: Names should be complete words, brief, lowercase, separated by "-", with notations for \*specials\* \+constants\+ and \<class\>.
 
@@ -151,7 +151,7 @@
 * Use lower case for all symbols. Consistently using lower case makes searching for symbol names easier and is more readable.
 * The names of global constants should start and end with plus characters.
   
-# DEFINING FUNCTIONS
+## DEFINING FUNCTIONS
 
 ## Consensus: Avoid having both \&OPTIONAL and \&KEY arguments if at all possible.
   
@@ -161,7 +161,7 @@
 (NPKP)
 * Don't mix &optional and &key.
 
-# SPECIAL VARIABLES
+## SPECIAL VARIABLES
 
 ## Consensus: Use special variables sparingly if at all.
 
@@ -176,7 +176,7 @@
 (NPKP)
 * Watch out for global state like setq and property lists.
   
- # INDENTATION
+ ## INDENTATION
  
  ## Consensus: Use the indentation "standard" provided by a properly calibrated editor.
  
@@ -195,7 +195,7 @@
 (LPCM)
 * Use proper indentation -- you should be able to understand the structure of your definitions without noticing the parentheses. 
 
-# FUNCTIONAL STYLE
+## FUNCTIONAL STYLE
 
 ## Consensus: Write single-purpose functions.
 
@@ -208,7 +208,7 @@
 (NPKP)
 * Every function should have: A single specific purpose.
 
-# EVAL USAGE
+## EVAL USAGE
 
 ## Consensus: Eval is a red flag.
 
@@ -221,7 +221,7 @@
 (GCLS)
 * You must not use EVAL at runtime.
 
-# MACROS
+## MACROS
 
 ## Consensus: It is better to use a macro than to define one, but the best is to understand one.
 
@@ -243,7 +243,7 @@
 * Avoid common mistakes: recompile after changing macros or inline functions.
 * You should be able to do the following: macroexpand any expression.
 
-# USAGE OF :USE
+## USAGE OF :USE
 
 ## Consensus: Unless you truly need all the symbols, :import-from is better than :use.
 
@@ -254,7 +254,7 @@
 (LLSG)
 * Unless you are really going to need all (or most of) the symbols in a package, it is strongly recommended that you write a manual :import-from list as opposed to using :use.
 
-# ERROR DETECTION: UNDERSTANDING CONDITIONS VS ERRORS
+## ERROR DETECTION: UNDERSTANDING CONDITIONS VS ERRORS
 
 ## Consensus: All errors are conditions; not all conditions are errors.
 
@@ -266,7 +266,7 @@
 * ERROR should always be called with an explicit condition type.
 * There are a few places where handling all conditions is appropriate, but they are rare. The problem is that handling all conditions can mask program bugs. If you do need to handle "all conditions", you MUST handle only ERROR, not T and not SERIOUS-CONDITION. (This is notably because CCL's process shutdown depends on being able to signal process-reset and have it handled by CCL's handler, so we must not interpose our own handler.)
 
-# LIBRARY USAGE
+## LIBRARY USAGE
 
 ## Consensus: It's well spoken of. 
 
@@ -277,7 +277,7 @@
 * Be opportunistic; use existing tools
 * Libraries may have access to low-level efficiency hacks, and are often fine-tuned. BUT they may be too general, hence inefficient. Write a specific version when efficiency is a problem. 
 
-# RECURSION
+## RECURSION
 
 ## Consensus: You need to use recursion only when you need to use recursion.
 
