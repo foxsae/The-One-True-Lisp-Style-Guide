@@ -3,6 +3,8 @@
 
 ### Despite the "tongue in cheek" title this is not actually a serious attempt to create yet another Lisp programming style guide, rather it is an attempt to find agreement among a number of different Lisp style guides and then reduce them to one line injunctions, purely for my own interests. However, if this itself does turn into a generally accepted simplified Lisp style guide then I will try not to be too disappointed with that result. 
 
+![I honestly didn't think you could even USE emoji in variable names. Or that there were so many different crying ones.](https://imgs.xkcd.com/comics/code_quality.png)
+
 ## Sources
 
 (PNKP) [Tutorial on Good Lisp Programming Style by Peter Norvig and Kent Pitman](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf) (pdf)
