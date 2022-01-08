@@ -129,7 +129,7 @@
 (LPCM)
 * If you find yourself having trouble fitting everything in even with line breaking and relaxing the rules, either your function names are too long or your code isn't very modular. You should perceive this as a signal that you need to break up your big definitions into smaller chunks, each with a clearly defined purpose, and possibly replace long function names with concise but apt shorter ones.
 
-(NPKP)
+(PNKP)
 * Be consistent with capitalization most prefer like-this, not LikeThis.
 * \*special-variable\*.
 * \+constant\+.
@@ -160,7 +160,7 @@
 (GCLS)
 * You should avoid having both \&OPTIONAL and \&KEY arguments.
   
-(NPKP)
+(PNKP)
 * Don't mix &optional and &key.
 
 ## SPECIAL VARIABLES
@@ -175,7 +175,7 @@
 * Use special variables sparingly.
 * Using Lisp "special" (dynamically bound) variables as implicit arguments to functions should be used sparingly, and only in cases where it won't surprise the person reading the code, and where it offers significant benefits.
 
-(NPKP)
+(PNKP)
 * Watch out for global state like setq and property lists.
   
  ## INDENTATION
@@ -207,7 +207,7 @@
 (GCLS)
 * You should avoid side-effects when they are not necessary.
 
-(NPKP)
+(PNKP)
 * Every function should have: A single specific purpose.
 
 ## EVAL USAGE
@@ -217,7 +217,7 @@
 (LPCM)
 * EVAL. Novices almost always misuse EVAL. When experts use EVAL, they often would be better off using APPLY, FUNCALL, or SYMBOL-VALUE. Use of EVAL when defining a macro should set off a warning bell -- macro definitions are already evaluated during expansion. See also the answer to question 3-12. The general rule of thumb about EVAL is: if you think you need to use EVAL, you're probably wrong.
 
-(NPKP)
+(PNKP)
 * Some red flags: Any use of eval
 
 (GCLS)
@@ -239,7 +239,7 @@
 (GCLS)
 * Use macros when appropriate, which is often. Define macros when appropriate, which is seldom.
 
-(NPKP)
+(PNKP)
 * Some Red Flags: The absence of an &environment parameter in a macro that uses setf to call macroexpand.
 * Avoid common mistakes: understand macros.
 * Avoid common mistakes: recompile after changing macros or inline functions.
@@ -275,7 +275,7 @@
 (LLSG)
 * Look for libraries that solve the problems you are trying to solve before embarking on a project. Making a project with no dependencies is not some sort of virtue. It doesn’t aid portability and it doesn’t help when it comes to turning a Lisp program into an executable.
 
-(NPKP)
+(PNKP)
 * Be opportunistic; use existing tools
 * Libraries may have access to low-level efficiency hacks, and are often fine-tuned. BUT they may be too general, hence inefficient. Write a specific version when efficiency is a problem. 
 
@@ -283,7 +283,7 @@
 
 ## Consensus: You need to use recursion only when you need to use recursion.
 
-(NPKP)
+(PNKP)
 * Recursion is good for recursive data structures.
 
 (GCLS)
