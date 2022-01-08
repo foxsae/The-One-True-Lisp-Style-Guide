@@ -38,9 +38,11 @@
   * **Consensus:**: It is better to use a macro than to define one, but the best is to understand one.
 ### 11. Usage of :use
   * **Consensus:** Unless you truly need all the symbols, :import-from is better than :use.
-### 12. Library Usage
+### 12. Error Detection: Understanding conditions vs errors
+  * **Consensus:** All errors are conditions; not all conditions are errors.
+### 13. Library Usage
   * **Consensus:** It's well spoken of. 
-### 13. Recursion
+### 14. Recursion
   * **Consensus:** You need to use recursion only when you need to use recursion.
 
 
