@@ -55,7 +55,7 @@
 ### 14. Recursion
   * **Consensus:**  Favor iteration over recursion. Recursion is good for recursive data structures.
 ### 15. Type Checking
-  * **Consensus:** If you know the type, you should make it explicit. This helps the compiler and those who need to read your code.
+  * **Consensus:** If you know the type, you should make it explicit. This may help the compiler and those who need to read your code.
 
 # LONG FORM EXPLANATIONS FROM SOURCES
 
@@ -308,7 +308,7 @@
 
 ## TYPE CHECKING
 
-## Consensus: If you know the type, you should make it explicit. This helps the compiler and those who need to read your code.
+## Consensus: If you know the type, you should make it explicit. This may help the compiler and those who need to read your code.
 
 (PNKP)
 * If you know type information, declare it. Don't do what some people do and only declare things you know the compiler will use.
