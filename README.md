@@ -42,6 +42,7 @@
   * **Consensus:**: It is better to use a macro than to define one, but the best is to understand one.
 ### 11. Usage of :use
   * **Consensus:** Unless you truly need all the symbols, :import-from is better than :use.
+  * **Note:** Package-local nicknames are now available on all major implementations, and are considered best practice.
 ### 12. Error Detection: Understanding conditions vs errors
   * **Consensus:** All errors are conditions; not all conditions are errors.
 ### 13. Library Usage
@@ -255,6 +256,7 @@
 ## USAGE OF :USE
 
 ## Consensus: Unless you truly need all the symbols, :import-from is better than :use.
+## Note: Package-local nicknames are now available on all major implementations, and are considered best practice.
 
 (ALCL)
 * Don't use :use unnecessarily. It is often hard to understand where a function came from. We recommend using :import-from for instead.
