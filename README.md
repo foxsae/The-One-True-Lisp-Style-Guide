@@ -56,6 +56,8 @@
   * **Consensus:**  Favor iteration over recursion. Recursion is good for recursive data structures.
 ### 15. Type Checking
   * **Consensus:** If you know the type, you should make it explicit. This may help the compiler and those who need to read your code.
+### 16. Conditional Expressions
+  * **Consensus:** Rather than using an "if" without an "else" it is better to use either "when" or "unless" 
 
 # LONG FORM EXPLANATIONS FROM SOURCES
 
@@ -325,6 +327,23 @@
 (LLSG)
 * Types are documentation, and Common Lisp allows you to declare the type of class slots.
 
+## CONDITIONAL EXPRESSSIONS
+
+## Consensus: Rather than using an "if" without an "else" it is better to use either "when" or "unless" 
+
+(PNKP)
+* Use the most specific conditional: 
+* If for two-branch expression
+* when, unless for one branch statement
+* and, or for boolean value only
+* cond for multi-branch statement or expression
+
+(ALCL)
+* Use WHEN, UNLESS if possible
+* Don't use if without "else" expression. when is more precise for it.
+
+(LLSG)
+* If you have an if expression with no else part, you should use when instead, and when you have an expression like (if (not <condition>) ...) with no else part, you should use unless.
 
 
 
