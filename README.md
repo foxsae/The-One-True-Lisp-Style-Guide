@@ -32,7 +32,7 @@
 ### 3. Line Length
   * **Consensus:**: Limit the line length, less than 100, but shorter is better.
 ### 4. Naming Conventions
-  * **Consensus:** Names should be complete words, brief, lowercase, separated by "-", with notations for \*specials\* \+constants\+ and \<class\>.
+  * **Consensus:** Names should be complete words, brief, lowercase, separated by "-". Use notations for \*specials\* and \+constants\+.
 ### 5. Defining Functions
   * **Consensus:**: Avoid having both \&OPTIONAL and \&KEY arguments if at all possible.
 ### 6. Special Variables
@@ -141,7 +141,7 @@
 
 ## NAMING CONVENTIONS
 
-## Consensus: Names should be complete words, brief, lowercase, separated by "-", with notations for \*specials\* \+constants\+ and \<class\>.
+## Consensus: Names should be complete words, brief, lowercase, separated by "-". Use notations for \*specials\* and \+constants\+.
 
 (LPCM)
 * If you find yourself having trouble fitting everything in even with line breaking and relaxing the rules, either your function names are too long or your code isn't very modular. You should perceive this as a signal that you need to break up your big definitions into smaller chunks, each with a clearly defined purpose, and possibly replace long function names with concise but apt shorter ones.
@@ -150,7 +150,6 @@
 * Be consistent with capitalization most prefer like-this, not LikeThis.
 * \*special-variable\*.
 * \+constant\+.
-* \<class\>.
 * Minimize abbreviations.
 * Most words have many possible abbreviations but only one correct spelling. Spell out names so they are easier to read, remember, and find.
 * A good test (for a native English speaker) is: Would you say the word aloud in conversation?
