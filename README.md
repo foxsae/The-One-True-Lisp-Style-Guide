@@ -53,7 +53,7 @@
 ### 13. Library Usage
   * **Consensus:** It's well spoken of. 
 ### 14. Recursion
-  * **Consensus:**  Recursion is good for recursive data structures.
+  * **Consensus:**  Favor iteration over recursion. Recursion is good for recursive data structures.
 ### 15. Type Checking
   * **Consensus:** If you know the type, you should make it explicit. This helps the compiler and those who need to read your code.
 
@@ -298,7 +298,7 @@
 
 ## RECURSION
 
-## Consensus: Recursion is good for recursive data structures.
+## Consensus: Favor iteration over recursion. Recursion is good for recursive data structures.
 
 (PNKP)
 * Recursion is good for recursive data structures.
