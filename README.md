@@ -53,8 +53,8 @@
 ### 13. Library Usage
   * **Consensus:** It's well spoken of. 
 ### 14. Recursion
-  * **Consensus:** You need to use recursion only when you need to use recursion.
-
+  * **Consensus:**  Recursion is good for recursive data structures.
+  * 
 # LONG FORM EXPLANATIONS FROM SOURCES
 
 ## DOCUMENTATION
