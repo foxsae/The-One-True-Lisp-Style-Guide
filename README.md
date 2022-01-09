@@ -1,7 +1,9 @@
 # The One True Lisp Style Guide 
 ##### (aka The lowest Common Lisp denominator)
 
-### Despite the "tongue in cheek" title this is not actually a serious attempt to create yet another Lisp programming style guide, rather it is an attempt to find agreement among a number of different Lisp style guides and then reduce them to one line injunctions, purely for my own interests. However, if this itself does turn into a generally accepted simplified Lisp style guide then I will try not to be too disappointed with that result. I will accept pull requests or changes if you can show there is agreement between two or more of the style guides from the sources list. If you know of any important Common Lisp style guides that I have missed please let me know. 
+### Despite the "tongue in cheek" title this is not actually a serious attempt to create yet another Lisp programming style guide, rather it is an attempt to find agreement among a number of different Lisp style guides and then reduce them to one line injunctions, purely for my own interests. However, if this itself does turn into a generally accepted simplified Lisp style guide then I will try not to be too disappointed with that result. 
+
+I will accept pull requests or changes if you can show there is agreement between two or more of the style guides from the sources list. If you know of any important Common Lisp style guides that I have missed please let me know. 
 
 ![I honestly didn't think you could even USE emoji in variable names. Or that there were so many different crying ones.](https://imgs.xkcd.com/comics/code_quality.png)
 
