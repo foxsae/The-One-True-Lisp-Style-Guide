@@ -17,6 +17,8 @@
 
 (LPCM) [Lisp programming style from Carnegie Mellon University Lisp Group](https://www.cs.cmu.edu/Groups/AI/html/faqs/lang/lisp/part1/faq-doc-4.html) (www)
 
+(CLHS) [Common Lisp Hyper Spec](http://www.lispworks.com/documentation/lw60/CLHS/Front/index.htm)
+
 ## RESULTS SO FAR...
 ### 1. Documentation
   * **Consensus:** Docstrings are very important. Docstrings are more important than comments. 
@@ -76,6 +78,10 @@
  
  (LLSG)
  * Docstrings everywhere.
+
+ (CLHS)
+ * Comments that begin with a single semicolon are all aligned to the same column at the right (sometimes called the 'comment column'). The text of such a comment generally applies only to the line on which it appears.
+ * Comments that begin with a quadruple semicolon are all aligned to the left margin, and generally contain only a short piece of text that serve as a title for the code which follows, and might be used in the header or footer of a program that prepares code for presentation as a hardcopy document.
 
 ## COMMENT CONVENTIONS
 
