@@ -31,7 +31,7 @@
 ### 5. Defining Functions
   * **Consensus:**: Avoid having both \&OPTIONAL and \&KEY arguments if at all possible.
 ### 6. Special Variables
-  * **Consensus:** Use special variables sparingly if at all.
+  * **Consensus:** Use special variables sparingly.
 ### 7. Indentation
   * **Consensus:** Use the indentation "standard" provided by a properly calibrated editor.
 ### 8. Functional Style
@@ -173,7 +173,7 @@
 
 ## SPECIAL VARIABLES
 
-## Consensus: Use special variables sparingly if at all.
+## Consensus: Use special variables sparingly.
 
 (LPCM)
 * In general, avoid unnecessary use of special variables.
