@@ -79,9 +79,6 @@
  (LLSG)
  * Docstrings everywhere.
 
- (CLHS)
- * Comments that begin with a single semicolon are all aligned to the same column at the right (sometimes called the 'comment column'). The text of such a comment generally applies only to the line on which it appears.
- * Comments that begin with a quadruple semicolon are all aligned to the left margin, and generally contain only a short piece of text that serve as a title for the code which follows, and might be used in the header or footer of a program that prepares code for presentation as a hardcopy document.
 
 ## COMMENT CONVENTIONS
 
@@ -110,6 +107,10 @@
 * Comments starting with three semicolons, ;;;, should be used to separate regions of the code.
 * Comments with two semicolons, ;;, should describe regions of code within a function or some other top-level form. 
 * Single-semicolon comments, ;, should just be short notes on a single line.
+
+(CLHS)
+* Comments that begin with a single semicolon are all aligned to the same column at the right (sometimes called the 'comment column'). The text of such a comment generally applies only to the line on which it appears.
+* Comments that begin with a quadruple semicolon are all aligned to the left margin, and generally contain only a short piece of text that serve as a title for the code which follows, and might be used in the header or footer of a program that prepares code for presentation as a hardcopy document.
 
 ## LINE LENGTH
 
