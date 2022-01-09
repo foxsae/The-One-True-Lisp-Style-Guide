@@ -1,9 +1,9 @@
 # The One True Lisp Style Guide 
 ##### (aka The lowest Common Lisp denominator)
 
-### Despite the "tongue in cheek" title this is not actually a serious attempt to create yet another Lisp programming style guide, rather it is an attempt to find agreement among a number of different Lisp style guides and then reduce them to one line injunctions, purely for my own interests. However, if this itself does turn into a generally accepted simplified Lisp style guide then I will try not to be too disappointed with that result. 
+## Purpose: To create a subset of style recommendations for Common Lisp based upon the points of agreement found in other style guides.
 
-
+### Note: Despite the "tongue in cheek" title this is not actually a serious attempt to create yet another Lisp programming style guide, rather it is an attempt to find agreement among a number of different Lisp style guides and then reduce them to one line injunctions, purely for my own interests. However, if this itself does turn into a generally accepted simplified Lisp style guide then I will try not to be too disappointed with that result. 
 
 ![I honestly didn't think you could even USE emoji in variable names. Or that there were so many different crying ones.](https://imgs.xkcd.com/comics/code_quality.png)
 
@@ -23,7 +23,7 @@
 
 ## RESULTS SO FAR...
 
-#### These results are a work in progress. I will accept changes to them if you can show points where there is general agreement between any two or more of the guides from the sources list. If you know of an important Common Lisp style guide that should be included here please let me know. 
+#### These results are a work in progress. I will accept changes to them if you can show points where there is general agreement between any two or more of the guides from the Sources. If you know of an important Common Lisp style guide that should be included in the Sources please let me know. 
 
 ### 1. Documentation
   * **Consensus:** Docstrings are very important. Docstrings are more important than comments. 
@@ -90,6 +90,7 @@
  
  (LLSG)
  * Docstrings everywhere.
+ * Common Lisp allows you to add docstrings to functions, packages, classes and individual slots, and you should use this.
 
 
 ## COMMENT CONVENTIONS
@@ -343,6 +344,9 @@
 * Don't use if without "else" expression. when is more precise for it.
 
 (LLSG)
+* Use if when you have a true branch and a false branch.
+* Use when or unless when you’re only interested in one condition branch.
+* Use cond when you have several conditional branches.
 * If you have an if expression with no else part, you should use when instead, and when you have an expression like (if (not <condition>) ...) with no else part, you should use unless.
 
 
