@@ -295,7 +295,7 @@
 
 ## RECURSION
 
-## Consensus: You need to use recursion only when you need to use recursion.
+## Consensus: Recursion is good for recursive data structures.
 
 (PNKP)
 * Recursion is good for recursive data structures.
