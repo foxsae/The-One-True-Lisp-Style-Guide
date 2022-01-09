@@ -322,6 +322,9 @@
 (GCLS)
 * If you know the type of something, you should make it explicit in order to enable compile-time and run-time sanity-checking.
 
+(LLSG)
+* Types are documentation, and Common Lisp allows you to declare the type of class slots.
+
 
 
 
