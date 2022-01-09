@@ -54,6 +54,8 @@
   * **Consensus:** It's well spoken of. 
 ### 14. Recursion
   * **Consensus:**  Recursion is good for recursive data structures.
+### 15. Type Checking
+  * **Consensus:** If you know the type, you should make it explicit. This helps the compiler and those who need to read your code.
 
 # LONG FORM EXPLANATIONS FROM SOURCES
 
@@ -70,6 +72,8 @@
 (PNKP)
 * Documentation strings are better than comments.
 * Say what it is for, not just what it does.
+* If you're thinking of something useful that others might want to know when they read your code and that might not be instantly apparent to them make it a comment.
+* Documentation should be organized around tasks the user needs to do, not around what your program happens to provide. Adding aocumentation strings to eacdh function usually doesn't tell the reader how to use your program, but hints in the right place can be bery effective.
 
 (ALCL)
 * All comments are optional. Usually, comments are for writer of the program and it is you in most of the times. If you think that it should be known by users, it must be included in docstring, not comment.
@@ -303,6 +307,21 @@
 (GCLS)
 * You should favor iteration over recursion.
 
+## TYPE CHECKING
+
+## Consensus: If you know the type, you should make it explicit. This helps the compiler and those who need to read your code.
+
+(PNKP)
+* If you know type information, declare it. Don't do what some people do and only declare things you know the compiler will use.
+
+(ALCL)
+* Add :type to each slots for Class
+
+(LPCM)
+* Use type declarations liberally in time-critical code, but only if you are a seasoned Lisp programmer. Appropriate type declarations help the compiler generate more specific and optimized code. It also lets the reader know what assumptions were made
+
+(GCLS)
+* If you know the type of something, you should make it explicit in order to enable compile-time and run-time sanity-checking.
 
 
 
