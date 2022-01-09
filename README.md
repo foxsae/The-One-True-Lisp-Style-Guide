@@ -3,7 +3,7 @@
 
 ### Despite the "tongue in cheek" title this is not actually a serious attempt to create yet another Lisp programming style guide, rather it is an attempt to find agreement among a number of different Lisp style guides and then reduce them to one line injunctions, purely for my own interests. However, if this itself does turn into a generally accepted simplified Lisp style guide then I will try not to be too disappointed with that result. 
 
-I will accept pull requests or changes if you can show there is agreement between two or more of the style guides from the sources list. If you know of any important Common Lisp style guides that I have missed please let me know. 
+
 
 ![I honestly didn't think you could even USE emoji in variable names. Or that there were so many different crying ones.](https://imgs.xkcd.com/comics/code_quality.png)
 
@@ -22,6 +22,9 @@ I will accept pull requests or changes if you can show there is agreement betwee
 (CLHS) [Common Lisp Hyper Spec](http://www.lispworks.com/documentation/lw60/CLHS/Front/index.htm)
 
 ## RESULTS SO FAR...
+
+#### These results are a work in progress. I will accept changes to them if you can show points where there is general agreement between any two or more of the guides from the sources list. If you know of an important Common Lisp style guide that should be included here please let me know. 
+
 ### 1. Documentation
   * **Consensus:** Docstrings are very important. Docstrings are more important than comments. 
 ### 2. Comment Conventions
