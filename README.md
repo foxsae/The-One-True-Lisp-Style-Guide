@@ -54,7 +54,7 @@
   * **Consensus:** It's well spoken of. 
 ### 14. Recursion
   * **Consensus:**  Recursion is good for recursive data structures.
-  * 
+
 # LONG FORM EXPLANATIONS FROM SOURCES
 
 ## DOCUMENTATION
