@@ -30,7 +30,11 @@
 ### 2. Documentation
   * **Consensus:** Docstrings are very important. Docstrings are more important than comments. 
 ### 3. Comment Conventions
-  * **Consensus:** (1) ; in-line comment. (2) ;; top-level form/function comment. (3) ;;; in-between forms/functions/regions comment. (4) ;;;; header comment.
+  * **Consensus:** 
+  * * ; in-line comment
+  * * ;; top-level form/function comment. 
+  * * ;;; in-between forms/functions/regions comment. 
+  * * ;;;; header comment.
 ### 4. Line Length
   * **Consensus:**: Limit the line length, less than 100, but shorter is better.
 ### 5. Naming Conventions
