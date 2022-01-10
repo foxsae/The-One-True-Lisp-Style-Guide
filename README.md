@@ -61,7 +61,7 @@
 
 # LONG FORM EXPLANATIONS FROM SOURCES
 
-## DOCUMENTATION
+## 1. DOCUMENTATION
 
 ## Consensus: Docstrings are very important. Docstrings are more important than comments. 
 
@@ -93,7 +93,7 @@
  * Common Lisp allows you to add docstrings to functions, packages, classes and individual slots, and you should use this.
 
 
-## COMMENT CONVENTIONS
+## 2. COMMENT CONVENTIONS
 
 ## Consensus: (1) ; in-line comment. (2) ;; top-level form/function comment. (3) ;;; in-between forms/functions/regions comment. (4) ;;;; header comment.
 
@@ -125,7 +125,7 @@
 * Comments that begin with a single semicolon are all aligned to the same column at the right (sometimes called the 'comment column'). The text of such a comment generally applies only to the line on which it appears.
 * Comments that begin with a quadruple semicolon are all aligned to the left margin, and generally contain only a short piece of text that serve as a title for the code which follows, and might be used in the header or footer of a program that prepares code for presentation as a hardcopy document.
 
-## LINE LENGTH
+## 3. LINE LENGTH
 
 ## Consensus: Limit the line length, less than 100, but shorter is better.
 
@@ -142,7 +142,7 @@
 (NPKP)
 * 80-column maximum width.
 
-## NAMING CONVENTIONS
+## 4. NAMING CONVENTIONS
 
 ## Consensus: Names should be complete words, brief, lowercase, separated by "-". Use notations for \*specials\* and \+constants\+.
 
@@ -172,7 +172,7 @@
 * Use lower case for all symbols. Consistently using lower case makes searching for symbol names easier and is more readable.
 * The names of global constants should start and end with plus characters.
   
-## DEFINING FUNCTIONS
+## 5. DEFINING FUNCTIONS
 
 ## Consensus: Avoid having both \&OPTIONAL and \&KEY arguments if at all possible.
   
@@ -182,7 +182,7 @@
 (PNKP)
 * Don't mix &optional and &key.
 
-## SPECIAL VARIABLES
+## 6. SPECIAL VARIABLES
 
 ## Consensus: Use special variables sparingly.
 
@@ -197,7 +197,7 @@
 (PNKP)
 * Watch out for global state like setq and property lists.
   
- ## INDENTATION
+ ## 7. INDENTATION
  
  ## Consensus: Use the indentation "standard" provided by a properly calibrated editor.
  
@@ -216,7 +216,7 @@
 (LPCM)
 * Use proper indentation -- you should be able to understand the structure of your definitions without noticing the parentheses. 
 
-## FUNCTIONAL STYLE
+## 8. FUNCTIONAL STYLE
 
 ## Consensus: Write single-purpose functions.
 
@@ -231,7 +231,7 @@
 (PNKP)
 * Every function should have: A single specific purpose.
 
-## EVAL USAGE
+## 9. EVAL USAGE
 
 ## Consensus: Eval is a red flag.
 
@@ -245,7 +245,7 @@
 * You must not use EVAL at runtime.
 * Places where it is actually appropriate to use EVAL are so few and far between that you must consult with your reviewers; it's easily misused.
 
-## MACROS
+## 10. MACROS
 
 ## Consensus: It is better to use a macro than to define one, but the best is to understand one.
 
@@ -267,7 +267,7 @@
 * Avoid common mistakes: recompile after changing macros or inline functions.
 * You should be able to do the following: macroexpand any expression.
 
-## USAGE OF :USE
+## 11. USAGE OF :USE
 
 ## Consensus: Unless you truly need all the symbols, :import-from is better than :use.
 ## Note: Package-local nicknames are now available on all major implementations, and are considered best practice.
@@ -279,7 +279,7 @@
 (LLSG)
 * Unless you are really going to need all (or most of) the symbols in a package, it is strongly recommended that you write a manual :import-from list as opposed to using :use.
 
-## ERROR DETECTION: UNDERSTANDING CONDITIONS VS ERRORS
+## 12. ERROR DETECTION: UNDERSTANDING CONDITIONS VS ERRORS
 
 ## Consensus: All errors are conditions; not all conditions are errors.
 
@@ -291,7 +291,7 @@
 * ERROR should always be called with an explicit condition type.
 * There are a few places where handling all conditions is appropriate, but they are rare. The problem is that handling all conditions can mask program bugs. If you do need to handle "all conditions", you MUST handle only ERROR, not T and not SERIOUS-CONDITION. (This is notably because CCL's process shutdown depends on being able to signal process-reset and have it handled by CCL's handler, so we must not interpose our own handler.)
 
-## LIBRARY USAGE
+## 13. LIBRARY USAGE
 
 ## Consensus: It's well spoken of. 
 
@@ -307,7 +307,7 @@
 * Whichever library, old or new, you pick, you MUST get permission to incorporate third-party code into the code base. You must discuss the use of such library in the appropriate mailing-list, and have your code reviewed by people knowledgeable in the domain and/or the Lisp library ecosystem (if any). Please be ready to argue why this particular solution makes sense as compared to other available libraries.
 * Some libraries are distributed under licenses not compatible with the software you're writing, and must not be considered available for use. Be aware of these issues, or consult with people who are.
 
-## RECURSION
+## 14. RECURSION
 
 ## Consensus: Favor iteration over recursion. Recursion is good for recursive data structures.
 
@@ -317,7 +317,7 @@
 (GCLS)
 * You should favor iteration over recursion.
 
-## TYPE CHECKING
+## 15. TYPE CHECKING
 
 ## Consensus: If you know the type, you should make it explicit. This may help the compiler and those who need to read your code.
 
@@ -336,7 +336,7 @@
 (LLSG)
 * Types are documentation, and Common Lisp allows you to declare the type of class slots.
 
-## CONDITIONAL EXPRESSSIONS
+## 16. CONDITIONAL EXPRESSSIONS
 
 ## Consensus: Rather than using an "if" without an "else" it is better to use either "when" or "unless". Use "cond" for multi-brach statements. 
 
