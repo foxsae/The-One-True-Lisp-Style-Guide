@@ -57,7 +57,7 @@
 ### 15. Type Checking
   * **Consensus:** If you know the type, you should make it explicit. This may help the compiler and those who need to read your code.
 ### 16. Conditional Expressions
-  * **Consensus:** Rather than using an "if" without an "else" it is better to use either "when" or "unless" 
+  * **Consensus:** Rather than using an "if" without an "else" it is better to use either "when" or "unless". Use "cond" for multi-brach statements.
 
 # LONG FORM EXPLANATIONS FROM SOURCES
 
@@ -177,7 +177,7 @@
 ## Consensus: Avoid having both \&OPTIONAL and \&KEY arguments if at all possible.
   
 (GCLS)
-* You should avoid having both \&OPTIONAL and \&KEY arguments.
+* You should avoid having both &OPTIONAL and &KEY arguments, unless it never makes sense to specify keyword arguments when the optional arguments are not all specified. You must not have non-NIL defaults to your &OPTIONAL arguments when your function has both &OPTIONAL and &KEY arguments
   
 (PNKP)
 * Don't mix &optional and &key.
@@ -225,6 +225,8 @@
 
 (GCLS)
 * You should avoid side-effects when they are not necessary.
+* Avoid modifying local variables, try rebinding instead
+* In the spirit of a mostly pure functional style, which makes testing and maintenance easier, we invite you to consider how to do things with the fewest assignments required.
 
 (PNKP)
 * Every function should have: A single specific purpose.
@@ -241,6 +243,7 @@
 
 (GCLS)
 * You must not use EVAL at runtime.
+* Places where it is actually appropriate to use EVAL are so few and far between that you must consult with your reviewers; it's easily misused.
 
 ## MACROS
 
@@ -335,7 +338,7 @@
 
 ## CONDITIONAL EXPRESSSIONS
 
-## Consensus: Rather than using an "if" without an "else" it is better to use either "when" or "unless" 
+## Consensus: Rather than using an "if" without an "else" it is better to use either "when" or "unless". Use "cond" for multi-brach statements. 
 
 (PNKP)
 * Use the most specific conditional: 
@@ -353,6 +356,9 @@
 * Use when or unless when you’re only interested in one condition branch.
 * Use cond when you have several conditional branches.
 * If you have an if expression with no else part, you should use when instead, and when you have an expression like (if (not <condition>) ...) with no else part, you should use unless.
+ 
+ (GCLS)
+ * Use WHEN and UNLESS when there is only one alternative. Use IF when there are two alternatives and COND when there are several.
 
 
 
