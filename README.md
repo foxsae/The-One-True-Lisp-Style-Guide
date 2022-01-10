@@ -47,7 +47,7 @@
   * **Consensus:** Use the indentation "standard" provided by a properly calibrated editor.
 ### 9. Functional Style
   * **Consensus:** Write single-purpose functions.
-### 19. Eval Usage
+### 10. Eval Usage
   * **Consensus:** Eval is a red flag.
 ### 11. Macros
   * **Consensus:**: It is better to use a macro than to define one, but the best is to understand one.
