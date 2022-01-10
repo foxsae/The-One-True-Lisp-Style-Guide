@@ -299,6 +299,11 @@
 * Be opportunistic; use existing tools
 * Libraries may have access to low-level efficiency hacks, and are often fine-tuned. BUT they may be too general, hence inefficient. Write a specific version when efficiency is a problem. 
 
+(GCLS)
+* You MUST NOT start a new library unless you established that none is already available that can be fixed or completed into becoming what you need. That's a rule against the NIH syndrome ("Not Invented Here"), which is particularly strong amongst Lisp hackers.
+* Whichever library, old or new, you pick, you MUST get permission to incorporate third-party code into the code base. You must discuss the use of such library in the appropriate mailing-list, and have your code reviewed by people knowledgeable in the domain and/or the Lisp library ecosystem (if any). Please be ready to argue why this particular solution makes sense as compared to other available libraries.
+* Some libraries are distributed under licenses not compatible with the software you're writing, and must not be considered available for use. Be aware of these issues, or consult with people who are.
+
 ## RECURSION
 
 ## Consensus: Favor iteration over recursion. Recursion is good for recursive data structures.
