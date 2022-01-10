@@ -3,7 +3,7 @@
 
 ## Purpose: To create a subset of style recommendations for Common Lisp based upon the points of agreement found in other style guides.
 
-### Note: Despite the "tongue in cheek" title this is not actually a serious attempt to create yet another Lisp programming style guide, rather it is an attempt to find agreement among a number of different Lisp style guides and then reduce them to one line injunctions, purely for my own interests. However, if this itself does turn into a generally accepted simplified Lisp style guide then I will try not to be too disappointed with that result. 
+#### Note: Despite the "tongue in cheek" title this is not actually a serious attempt to create yet another Lisp programming style guide, rather it is an attempt to find agreement among a number of different Lisp style guides and then reduce them to one line injunctions, purely for my own interests. However, if this itself does turn into a generally accepted simplified Lisp style guide then I will try not to be too disappointed with that result. 
 
 ![I honestly didn't think you could even USE emoji in variable names. Or that there were so many different crying ones.](https://imgs.xkcd.com/comics/code_quality.png)
 
@@ -25,49 +25,77 @@
 
 ## RESULTS SO FAR...
 
-#### These results are a work in progress. I will accept changes to them if you can show points where there is general agreement between any two or more of the guides from the Sources. If you know of an important Common Lisp style guide that should be included in the Sources please let me know. 
-
-### 1. Documentation
+### 1. The Importance of Style Guides
+  * **Consensus:** They improve readability, and help programmers avoid pitfalls.
+### 2. Documentation
   * **Consensus:** Docstrings are very important. Docstrings are more important than comments. 
-### 2. Comment Conventions
+### 3. Comment Conventions
   * **Consensus:** (1) ; in-line comment. (2) ;; top-level form/function comment. (3) ;;; in-between forms/functions/regions comment. (4) ;;;; header comment.
-### 3. Line Length
+### 4. Line Length
   * **Consensus:**: Limit the line length, less than 100, but shorter is better.
-### 4. Naming Conventions
+### 5. Naming Conventions
   * **Consensus:** Names should be complete words, brief, lowercase, separated by "-". Use notations for \*specials\* and \+constants\+.
-### 5. Defining Functions
+### 6. Defining Functions
   * **Consensus:**: Avoid having both \&OPTIONAL and \&KEY arguments if at all possible.
-### 6. Special Variables
+### 7. Special Variables
   * **Consensus:** Use special variables sparingly.
-### 7. Indentation
+### 8. Indentation
   * **Consensus:** Use the indentation "standard" provided by a properly calibrated editor.
-### 8. Functional Style
+### 9. Functional Style
   * **Consensus:** Write single-purpose functions.
-### 9. Eval Usage
+### 19. Eval Usage
   * **Consensus:** Eval is a red flag.
-### 10. Macros
+### 11. Macros
   * **Consensus:**: It is better to use a macro than to define one, but the best is to understand one.
-### 11. Usage of :use
+### 12. Usage of :use
   * **Consensus:** Unless you truly need all the symbols, :import-from is better than :use.
   * **Note:** Package-local nicknames are now available on all major implementations, and are considered best practice.
-### 12. Error Detection: Understanding conditions vs errors
+### 13. Error Detection: Understanding conditions vs errors
   * **Consensus:** All errors are conditions; not all conditions are errors.
-### 13. Library Usage
+### 14. Library Usage
   * **Consensus:** It's well spoken of. 
-### 14. Recursion
+### 15. Recursion
   * **Consensus:**  Favor iteration over recursion. Recursion is good for recursive data structures.
-### 15. Type Checking
+### 16. Type Checking
   * **Consensus:** If you know the type, you should make it explicit. This may help the compiler and those who need to read your code.
-### 16. Conditional Expressions
+### 17. Conditional Expressions
   * **Consensus:** Rather than using an "if" without an "else" it is better to use either "when" or "unless". Use "cond" for multi-brach statements.
-### 17. Predicates
+### 18. Predicates
   * **Consensus:** Predicates should be suffixed with "p" or "-p" depending on if the word has hyphens in it already, and return "t" or "nil".
-### 18. List Abuse
+### 19. List Abuse
   * **Consensus:** Use the appropriate data structure for the situation.
 
 # LONG FORM EXPLANATIONS FROM SOURCES
 
-## 1. DOCUMENTATION
+## 1. THE IMPORTANCE OF STYLE GUIDES
+## Consensus: They improve readability, and help programmers avoid pitfalls.
+
+(LPCM)
+* Here are some general suggestions/notes about improving Lisp programming style, readability, correctness and efficiency
+
+(PNKP)
+* Don't believe everything we tell you. (Just most.)
+* Worry less about what to believe and more about why.
+* Know where your "Style Rules come from:
+* * Religion, Good vs Evil "This way is better."
+* * Philosophy "This is consistent with other things."
+* * Robustness, Liability, Safety, Ethics "I'll put in redundant checks to avoid something horrible."
+* * Legality "Our lawyers say do it this way."
+* * Compatibility "Another tool expects this way."
+* * Portability "Other compilers prefer this way."
+* * Cooperation, Convention "It has to be done some uniform way, so we agreed on this one."
+* * Habit, Tradition "We've always done it this way."
+* * Ability "My programmers aren't sophisticated enough."
+* * Superstition "I'm scared to do it differenetly."
+* * Practicality "This makes other things easier."
+
+(GCLS)
+* You MUST follow conventions. They are not optional.
+* Some of these guidelines are motivated by universal principles of good programming. Some guidelines are motivated by technical peculiarities of Common Lisp. Some guidelines were once motivated by a technical reason, but the guideline remained after the reason subsided. Some guidelines, such those about as comments and indentation, are based purely on convention, rather than on clear technical merit. Whatever the case may be, you must still follow these guidelines, as well as other conventional guidelines that have not been formalized in this document.
+* You MUST follow conventions. They are important for readability. When conventions are followed by default, violations of the convention are a signal that something notable is happening and deserves attention. When conventions are systematically violated, violations of the convention are a distracting noise that needs to be ignored.
+* Conventional guidelines are indoctrination. Their purpose is to make you follow the mores of the community, so you can more effectively cooperate with existing members. It is still useful to distinguish the parts that are technically motivated from the parts that are mere conventions, so you know when best to defy conventions for good effect, and when not to fall into the pitfalls that the conventions are there to help avoid.
+
+## 2. DOCUMENTATION
 
 ## Consensus: Docstrings are very important. Docstrings are more important than comments. 
 
@@ -99,7 +127,7 @@
  * Common Lisp allows you to add docstrings to functions, packages, classes and individual slots, and you should use this.
 
 
-## 2. COMMENT CONVENTIONS
+## 3. COMMENT CONVENTIONS
 
 ## Consensus: (1) ; in-line comment. (2) ;; top-level form/function comment. (3) ;;; in-between forms/functions/regions comment. (4) ;;;; header comment.
 
@@ -131,7 +159,7 @@
 * Comments that begin with a single semicolon are all aligned to the same column at the right (sometimes called the 'comment column'). The text of such a comment generally applies only to the line on which it appears.
 * Comments that begin with a quadruple semicolon are all aligned to the left margin, and generally contain only a short piece of text that serve as a title for the code which follows, and might be used in the header or footer of a program that prepares code for presentation as a hardcopy document.
 
-## 3. LINE LENGTH
+## 4. LINE LENGTH
 
 ## Consensus: Limit the line length, less than 100, but shorter is better.
 
@@ -148,7 +176,7 @@
 (NPKP)
 * 80-column maximum width.
 
-## 4. NAMING CONVENTIONS
+## 5. NAMING CONVENTIONS
 
 ## Consensus: Names should be complete words, brief, lowercase, separated by "-". Use notations for \*specials\* and \+constants\+.
 
@@ -181,7 +209,7 @@
 (CLtL)
 * Symbols that name special variables generally have names beginning and ending with *
   
-## 5. DEFINING FUNCTIONS
+## 6. DEFINING FUNCTIONS
 
 ## Consensus: Avoid having both \&OPTIONAL and \&KEY arguments if at all possible.
   
@@ -191,7 +219,7 @@
 (PNKP)
 * Don't mix &optional and &key.
 
-## 6. SPECIAL VARIABLES
+## 7. SPECIAL VARIABLES
 
 ## Consensus: Use special variables sparingly.
 
@@ -206,7 +234,7 @@
 (PNKP)
 * Watch out for global state like setq and property lists.
   
- ## 7. INDENTATION
+ ## 8. INDENTATION
  
  ## Consensus: Use the indentation "standard" provided by a properly calibrated editor.
  
@@ -225,7 +253,7 @@
 (LPCM)
 * Use proper indentation -- you should be able to understand the structure of your definitions without noticing the parentheses. 
 
-## 8. FUNCTIONAL STYLE
+## 9. FUNCTIONAL STYLE
 
 ## Consensus: Write single-purpose functions.
 
@@ -240,7 +268,7 @@
 (PNKP)
 * Every function should have: A single specific purpose.
 
-## 9. EVAL USAGE
+## 10. EVAL USAGE
 
 ## Consensus: Eval is a red flag.
 
@@ -254,7 +282,7 @@
 * You must not use EVAL at runtime.
 * Places where it is actually appropriate to use EVAL are so few and far between that you must consult with your reviewers; it's easily misused.
 
-## 10. MACROS
+## 11. MACROS
 
 ## Consensus: It is better to use a macro than to define one, but the best is to understand one.
 
@@ -272,11 +300,13 @@
 
 (PNKP)
 * Some Red Flags: The absence of an &environment parameter in a macro that uses setf to call macroexpand.
-* Avoid common mistakes: understand macros.
-* Avoid common mistakes: recompile after changing macros or inline functions.
 * You should be able to do the following: macroexpand any expression.
+* Avoid common mistakes: 
+* * Understand macros.
+* * Recompile after changing macros or inline functions.
 
-## 11. USAGE OF :USE
+
+## 12. USAGE OF :USE
 
 ## Consensus: Unless you truly need all the symbols, :import-from is better than :use.
 ## Note: Package-local nicknames are now available on all major implementations, and are considered best practice.
@@ -288,7 +318,7 @@
 (LLSG)
 * Unless you are really going to need all (or most of) the symbols in a package, it is strongly recommended that you write a manual :import-from list as opposed to using :use.
 
-## 12. ERROR DETECTION: UNDERSTANDING CONDITIONS VS ERRORS
+## 13. ERROR DETECTION: UNDERSTANDING CONDITIONS VS ERRORS
 
 ## Consensus: All errors are conditions; not all conditions are errors.
 
@@ -300,7 +330,7 @@
 * ERROR should always be called with an explicit condition type.
 * There are a few places where handling all conditions is appropriate, but they are rare. The problem is that handling all conditions can mask program bugs. If you do need to handle "all conditions", you MUST handle only ERROR, not T and not SERIOUS-CONDITION. (This is notably because CCL's process shutdown depends on being able to signal process-reset and have it handled by CCL's handler, so we must not interpose our own handler.)
 
-## 13. LIBRARY USAGE
+## 14. LIBRARY USAGE
 
 ## Consensus: It's well spoken of. 
 
@@ -316,7 +346,7 @@
 * Whichever library, old or new, you pick, you MUST get permission to incorporate third-party code into the code base. You must discuss the use of such library in the appropriate mailing-list, and have your code reviewed by people knowledgeable in the domain and/or the Lisp library ecosystem (if any). Please be ready to argue why this particular solution makes sense as compared to other available libraries.
 * Some libraries are distributed under licenses not compatible with the software you're writing, and must not be considered available for use. Be aware of these issues, or consult with people who are.
 
-## 14. RECURSION
+## 15. RECURSION
 
 ## Consensus: Favor iteration over recursion. Recursion is good for recursive data structures.
 
@@ -326,7 +356,7 @@
 (GCLS)
 * You should favor iteration over recursion.
 
-## 15. TYPE CHECKING
+## 16. TYPE CHECKING
 
 ## Consensus: If you know the type, you should make it explicit. This may help the compiler and those who need to read your code.
 
@@ -345,16 +375,16 @@
 (LLSG)
 * Types are documentation, and Common Lisp allows you to declare the type of class slots.
 
-## 16. CONDITIONAL EXPRESSSIONS
+## 17. CONDITIONAL EXPRESSSIONS
 
 ## Consensus: Rather than using an "if" without an "else" it is better to use either "when" or "unless". Use "cond" for multi-brach statements. 
 
 (PNKP)
 * Use the most specific conditional: 
-* If for two-branch expression
-* when, unless for one branch statement
-* and, or for boolean value only
-* cond for multi-branch statement or expression
+* * If for two-branch expression
+* * when, unless for one branch statement
+* * and, or for boolean value only
+* * cond for multi-branch statement or expression
 
 (ALCL)
 * Use WHEN, UNLESS if possible
@@ -375,7 +405,7 @@
  (LPCM)
  * Use COND instead of nested IF statements. Be sure to check for unreachable cases, and eliminate those cond-clauses.
  
- ## 17. PREDICATES
+ ## 18. PREDICATES
  
  ## Consensus: Predicates should be suffixed with "p" or "-p" depending on if the word has hyphens in it already, and return "t" or "nil".
  
@@ -384,8 +414,8 @@
  
  (LLSG)
  * Predicates should be suffixed with:
- * "p" If the rest of the function name is a single word, e.g: abstractp, bluep, evenp.
- * "-p" If the rest of the function name is more than one word, e.g largest-planet-p, request-throttled-p.
+ * * "p" If the rest of the function name is a single word, e.g: abstractp, bluep, evenp.
+ * * "-p" If the rest of the function name is more than one word, e.g largest-planet-p, request-throttled-p.
  
  (GCLS)
  * Names of predicate functions and variables end with a "P".
@@ -400,7 +430,7 @@
  * If you intend for a function to be a predicate, have it return T for true, not just non-NIL. If there is nothing worth returning from a function, returning T is conventional. But if a function is intended to be more than just a predicate, it is better to return a useful value.
  
  
- ## 18. LIST ABUSE
+ ## 19. LIST ABUSE
  
  ## Consensus: Use the appropriate data structure for the situation.
  
