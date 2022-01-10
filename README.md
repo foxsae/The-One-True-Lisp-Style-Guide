@@ -175,6 +175,9 @@
 * You should use lower case. You should follow the rules for Spelling and Abbreviations You should follow punctuation conventions.
 * Use lower case for all symbols. Consistently using lower case makes searching for symbol names easier and is more readable.
 * The names of global constants should start and end with plus characters.
+
+(CLtL)
+* Symbols that name special variables generally have names beginning and ending with *
   
 ## 5. DEFINING FUNCTIONS
 
@@ -363,6 +366,9 @@
  
  (GCLS)
  * Use WHEN and UNLESS when there is only one alternative. Use IF when there are two alternatives and COND when there are several.
+ 
+ (CLtL)
+ * Common Lisp provides the simple one-way conditionals when and unless, the simple two-way conditional if, and the more general multi-way conditionals such as cond and case. The choice of which form to use in any particular situation is a matter of taste and style.
  
  ## 17. PREDICATES
  
