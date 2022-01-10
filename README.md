@@ -21,6 +21,8 @@
 
 (CLHS) [Common Lisp Hyper Spec](http://www.lispworks.com/documentation/lw60/CLHS/Front/index.htm)
 
+(CLtL) [Common Lisp the Language - Steele](https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/clm.html)
+
 ## RESULTS SO FAR...
 
 #### These results are a work in progress. I will accept changes to them if you can show points where there is general agreement between any two or more of the guides from the Sources. If you know of an important Common Lisp style guide that should be included in the Sources please let me know. 
@@ -58,6 +60,8 @@
   * **Consensus:** If you know the type, you should make it explicit. This may help the compiler and those who need to read your code.
 ### 16. Conditional Expressions
   * **Consensus:** Rather than using an "if" without an "else" it is better to use either "when" or "unless". Use "cond" for multi-brach statements.
+### 17. Predicates
+  * **Consensus:** Predicates should be suffixed with "p" or "-p" depending on if the word has hyphens in it already, and return "t" or "nil".
 
 # LONG FORM EXPLANATIONS FROM SOURCES
 
@@ -359,6 +363,33 @@
  
  (GCLS)
  * Use WHEN and UNLESS when there is only one alternative. Use IF when there are two alternatives and COND when there are several.
+ 
+ ## 17. PREDICATES
+ 
+ ## Consensus: Predicates should be suffixed with "p" or "-p" depending on if the word has hyphens in it already, and return "t" or "nil".
+ 
+ (PNKP)
+ * Be consistent in names: -p
+ 
+ (LLSG)
+ * Predicates should be suffixed with:
+ * "p" If the rest of the function name is a single word, e.g: abstractp, bluep, evenp.
+ * "-p" If the rest of the function name is more than one word, e.g largest-planet-p, request-throttled-p.
+ 
+ (GCLS)
+ * Names of predicate functions and variables end with a "P".
+ * You should name boolean-valued functions and variables with a trailing "P" or "-P", to indicate they are predicates. Generally, you should use "P" when the rest of the function name is one word and "-P" when it is more than one word.
+ 
+ (CLtL)
+ * A predicate is a function that tests for some condition involving its arguments and returns nil if the condition is false, or some non-nil value if the condition is true. 
+ * By convention, the names of predicates usually end in the letter p (which stands for "predicate").
+ * If the name of the predicate is formed by adding a p to an existing name, such as the name of a data type, a hyphen is placed before the final p if and only if there is a hyphen in the existing name.
+ 
+ (LPCM)
+ * If you intend for a function to be a predicate, have it return T for true, not just non-NIL. If there is nothing worth returning from a function, returning T is conventional. But if a function is intended to be more than just a predicate, it is better to return a useful value.
+ 
+ 
+ 
 
 
 
