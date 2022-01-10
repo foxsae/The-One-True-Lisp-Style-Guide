@@ -21,7 +21,7 @@
 
 (CLHS) [Common Lisp Hyper Spec](http://www.lispworks.com/documentation/lw60/CLHS/Front/index.htm)
 
-(CLtL) [Common Lisp the Language - Steele](https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/clm.html)
+(CLtL) [Common Lisp the Language - Steele](https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/clm.html) (www)
 
 ## RESULTS SO FAR...
 
