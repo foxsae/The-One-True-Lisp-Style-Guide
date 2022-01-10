@@ -62,6 +62,8 @@
   * **Consensus:** Rather than using an "if" without an "else" it is better to use either "when" or "unless". Use "cond" for multi-brach statements.
 ### 17. Predicates
   * **Consensus:** Predicates should be suffixed with "p" or "-p" depending on if the word has hyphens in it already, and return "t" or "nil".
+### 18. List Abuse
+  * **Consensus:** Use the appropriate data structure for the situation.
 
 # LONG FORM EXPLANATIONS FROM SOURCES
 
@@ -370,6 +372,9 @@
  (CLtL)
  * Common Lisp provides the simple one-way conditionals when and unless, the simple two-way conditional if, and the more general multi-way conditionals such as cond and case. The choice of which form to use in any particular situation is a matter of taste and style.
  
+ (LPCM)
+ * Use COND instead of nested IF statements. Be sure to check for unreachable cases, and eliminate those cond-clauses.
+ 
  ## 17. PREDICATES
  
  ## Consensus: Predicates should be suffixed with "p" or "-p" depending on if the word has hyphens in it already, and return "t" or "nil".
@@ -395,6 +400,23 @@
  * If you intend for a function to be a predicate, have it return T for true, not just non-NIL. If there is nothing worth returning from a function, returning T is conventional. But if a function is intended to be more than just a predicate, it is better to return a useful value.
  
  
+ ## 18. LIST ABUSE
+ 
+ ## Consensus: Use the appropriate data structure for the situation.
+ 
+ (GCLS)
+ * You must select proper data representation. You must not abuse the LIST data structure.
+ * You must not abuse the builtin (single-linked) LIST data structure where it is not appropriate, even though Common Lisp makes it especially easy to use it.
+ * You must only use lists when their performance characteristics is appropriate for the algorithm at hand: sequential iteration over the entire contents of the list.
+ * An exception where it is appropriate to use lists is when it is known in advance that the size of the list will remain very short (say, less than 16 elements).
+ * You should use arrays rather than lists where random access matters. The exception is for code outside the critical path where the list is known to be small anyway.
+ 
+ (LPCM)
+ * Don't use lists where vectors are more appropriate. Accessing the nth element of a vector is faster than finding the nth element of a list, since the latter requires pointer chasing while the former requires simple addition. Vectors also take up less space than lists. Use adjustable vectors with fill-pointers to implement a stack, instead of a list -- using a list continually conses and then throws away the conses.
+ * If your association list has more than about 10 entries in it, consider using a hash table. Hash tables are often more efficient.
+ 
+ (NPKP)
+ * Many people prefer to view a list as a sequence and use iteration over it, thus de-emphasizing the implementation detail that the list is split into a first and rest.
  
 
 
