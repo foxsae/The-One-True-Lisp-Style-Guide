@@ -1,5 +1,5 @@
 # The One True Lisp Style Guide 
-##### (aka The lowest Common Lisp denominator)
+##### (aka: The Lowest Common Lisp Denominator) 
 
 ## Purpose: To create a subset of style recommendations for Common Lisp based upon the points of agreement found in other style guides.
 
